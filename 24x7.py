@@ -2,10 +2,10 @@ import asyncio
 import aiohttp
 from datetime import datetime
 
-URL = "Enter Your Url"  # change with your url
+URL = "https://piyo.alwaysaqioo.dpdns.org/"  # change with your url
 
 PING_INTERVAL = 5
-COLD_START_TIMEOUT = 60     # its  important for Render and do not change it 
+COLD_START_TIMEOUT = 60     # it's important for Render and do not change it 
 NORMAL_TIMEOUT = 10
 
 async def ping(session, timeout):
@@ -38,5 +38,5 @@ async def main():
             await asyncio.sleep(PING_INTERVAL)
 
 
-if name == "__main__":
+if __name__ == "__main__":
     asyncio.run(main())
